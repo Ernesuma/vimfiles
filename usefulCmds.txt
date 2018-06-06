@@ -48,3 +48,25 @@ zW      : mark as wrong in internal list
 do      diff obtain: gets the change from the other file
 
 dp      diff put: puts the change to the other file
+
+
+# change line endings
+# -------------------
+Change the lineendings in the view:
+    :e ++ff=dos
+    :e ++ff=mac
+    :e ++ff=unix
+
+This can also be used as saving operation (:w alone will not save using the lineendings you see on screen):
+    :w ++ff=dos
+    :w ++ff=mac
+    :w ++ff=unix
+
+And you can use it from the command-line:
+    for file in $(ls *cpp)
+    do 
+        vi +':w ++ff=unix' +':q' ${file}
+    done
+
+Alternative: search and replace
+    :%s/\r/\r/g
