@@ -39,12 +39,12 @@ zW      : mark as wrong in internal list
 
 # diff mode
 # ---------
-[c		Jump backwards to the previous start of a change.
+[c      Jump backwards to the previous start of a change.
         When a count is used, do it that many times.
-								*]c*
-]c		Jump forwards to the next start of a change.
+                                *]c*
+]c      Jump forwards to the next start of a change.
         When a count is used, do it that many times.
 
-do	    diff obtain: gets the change from the other file
+do      diff obtain: gets the change from the other file
 
 dp      diff put: puts the change to the other file
