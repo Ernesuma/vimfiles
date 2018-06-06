@@ -342,6 +342,9 @@ command! MyUsefulCmds tabedit ~/vimfiles/usefulCmds.txt
 " make nice tree
 " --------------
 function! MakeNiceTree()
+    normal ggVGy
+    tabnew
+    normal gPdd
     echom "replace |+\\"
     %s/|   /│   /g
     %s/+-- /├━━ /g
