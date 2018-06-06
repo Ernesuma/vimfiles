@@ -1,0 +1,9 @@
+class <classname>() :
+    """
+    <class description>
+    """
+    def __init__(self) :
+        """
+        initialisation method
+        """
+        pass

@@ -1,0 +1,50 @@
+# self defined:
+# -------------
+,ul     : underline one line in commentary
+,lh     : goto the tag under cursor (e.g. in the help system)
+,hl     : go back in tag stack
+
+
+# insert mode
+# -----------
+gi      : insert text where last insert mode ended (uses ^-mark)
+
+
+# normal mode
+# -----------
+ga      : (or :as[cii]) print the ASCII code of character under cursor
+
+
+# search
+# ------
+g* g#   : no "\<" and "\>" around the word to search --> includes not-whole words
+gd gD   : Goto local/global declaration
+
+
+# spell checking
+# --------------
+]s      : next error
+[s      : previous error
+z=      : spelling suggestions
+zg      : add as good word to user list
+zG      : add as good word to internal list
+zw      : mark as wrong in user list
+zW      : mark as wrong in internal list
+
+
+# check out later
+# ---------------
+:cope
+
+
+# diff mode
+# ---------
+[c		Jump backwards to the previous start of a change.
+        When a count is used, do it that many times.
+								*]c*
+]c		Jump forwards to the next start of a change.
+        When a count is used, do it that many times.
+
+do	    diff obtain: gets the change from the other file
+
+dp      diff put: puts the change to the other file
