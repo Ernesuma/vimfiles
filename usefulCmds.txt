@@ -70,3 +70,22 @@ And you can use it from the command-line:
 
 Alternative: search and replace
     :%s/\r/\r/g
+
+
+# expression register
+# -------------------
+insert calc result (insert mode)
+<C-r>=sqrt(81)<C-m>
+
+insert calc result (normal mode)
+"=44*9<C-m>p
+
+insert result of ex cmd
+"=execute('exCmd')<C-m>p
+
+insert external cmd result
+"=system('ls')<C-m>p
+
+
+# show register
+:reg
