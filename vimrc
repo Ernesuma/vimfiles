@@ -403,7 +403,13 @@ if has("gui_running")
     set guioptions=gmLtT
 
     " type ':set guifont=*' to get a window to select and customise the font
-    set guifont=Lucida_Console:h11:cANSI
+    if has('gui_gtk')
+        "set guifont=Ubuntu\ Mono\ 11
+        set guifont=DejaVu\ Sans\ Mono\ 11
+    else
+        set guifont=Lucida_Console:h11:cANSI
+    endif
+
 
 
     " maximize, restore and minimize mapped to F12, F11 and F10
