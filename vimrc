@@ -292,7 +292,9 @@ nnoremap <Leader>wr <C-W>r
 nnoremap <Leader>wt <C-W>T
 
 " underline something
-nnoremap <Leader>ul yypwv$r-j
+nnoremap <Leader>ul yypv$r-j
+" underline something commented
+nnoremap <Leader>cul yypwv$r-j
 
 " Open/Close a NerdTree
 nnoremap <Leader>n :NERDTreeTabsToggle<CR>
