@@ -243,7 +243,7 @@ function! Highlighting()
 endfunction
 
 " map Highlighting function to Return-key
-nnoremap <silent> <expr> <CR> Highlighting()
+" nnoremap <silent> <expr> <CR> Highlighting()
 "-------------------------------------------------------------------------------
 
 
