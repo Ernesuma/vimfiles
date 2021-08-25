@@ -4,6 +4,8 @@
 " Creation Date : 28.08.2017
 "-------------------------------------------------------------------------------
 
+let s:vimfilespath = "~/.vim/"
+let s:vimrcPath = s:vimfilespath . '/vimrc'
 
 "-------------------------------------------------------------------------------
 " startup settings
@@ -330,13 +332,13 @@ nnoremap <S-right> 3<C-W>>
 command! MakeTags !ctags -R .
 
 " reload the vimrc file
-command! ReloadVimrc source ~/vimfiles/vimrc
+command! ReloadVimrc execute "source" s:vimrcPath
 
 " open vimrc file
-command! Vimrc tabedit ~/vimfiles/vimrc
+command! Vimrc execute "tabedit" s:vimrcPath
 
 " open my useful commands list
-command! MyUsefulCmds tabedit ~/vimfiles/usefulCmds.txt
+command! MyUsefulCmds execute "tabedit" s:vimfilespath . "usefulCmds.txt"
 "-------------------------------------------------------------------------------
 
 
