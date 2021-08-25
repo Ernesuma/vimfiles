@@ -4,6 +4,11 @@
 ,lh     : goto the tag under cursor (e.g. in the help system)
 ,hl     : go back in tag stack
 
+:Vimrc              : open vimrc file
+:ReloadVimrc        : loads the vimrc file again
+:MyUsefulCmds       : opens this file
+:CdCurrentFilePath  : cd into directory of current buffer file
+
 
 # insert mode
 # -----------
@@ -89,3 +94,7 @@ insert external cmd result
 
 # show register
 :reg
+
+# cd current file path
+# --------------------
+:cd  %p:h/
