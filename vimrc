@@ -339,6 +339,9 @@ command! Vimrc execute "tabedit" s:vimrcPath
 
 " open my useful commands list
 command! MyUsefulCmds execute "tabedit" s:vimfilespath . "usefulCmds.txt"
+
+" cd to dir of current buffer file
+command! CdCurrentFilePath cd %:p:h/
 "-------------------------------------------------------------------------------
 
 
