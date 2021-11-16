@@ -95,6 +95,15 @@ insert external cmd result
 # show register
 :reg
 
+
 # cd current file path
 # --------------------
 :cd  %p:h/
+
+
+# flake8
+# ------
+Python static code checker.
+F7      check current buffer
+:cn     next finding (quickfix)
+:cp     prev finding (quickfix)
