@@ -252,6 +252,12 @@ endfunction
 " highlight line background in insert mode
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
+
+" change curser depending on mode in tmux
+if exists('$TMUX')
+    let &t_SI = "\e[6 q"
+    let &t_EI = "\e[2 q"
+endif
 "-------------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------------
