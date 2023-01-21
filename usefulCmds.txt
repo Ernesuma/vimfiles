@@ -1,6 +1,7 @@
 # self defined:
 # -------------
-,ul     : underline one line in commentary
+,ul     : underline one line
+,cul     : underline one line in commentary
 ,lh     : goto the tag under cursor (e.g. in the help system)
 ,hl     : go back in tag stack
 
@@ -107,3 +108,11 @@ Python static code checker.
 F7      check current buffer
 :cn     next finding (quickfix)
 :cp     prev finding (quickfix)
+
+# VSCode Vim
+# ----------
+gb : multiselect next word as under cursor
+gcc : toggle comment
+gc2j : toggle next 2 lines comment
+gc43G : toggle comment till line 43
+gC : block comment
