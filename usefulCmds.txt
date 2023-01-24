@@ -1,9 +1,12 @@
 # self defined:
 # -------------
 ,ul     : underline one line
-,cul     : underline one line in commentary
+,cul    : underline one line in commentary
 ,lh     : goto the tag under cursor (e.g. in the help system)
 ,hl     : go back in tag stack
+
+,o      : insert newline below and stay in normal mode
+,O      : insert newline above and stay in normal mode
 
 :Vimrc              : open vimrc file
 :ReloadVimrc        : loads the vimrc file again
@@ -19,6 +22,9 @@ gi      : insert text where last insert mode ended (uses ^-mark)
 # normal mode
 # -----------
 ga      : (or :as[cii]) print the ASCII code of character under cursor
+{       : prev text block/empty line
+}       : next text block/empty line
+zz      : center active line
 
 
 # search

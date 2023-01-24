@@ -286,6 +286,10 @@ nnoremap <Leader>hl <C-t>
 noremap l h
 noremap h l
 
+" insert newline
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
+
 " remaps to navigate through split screens
 nnoremap <Leader>jj <C-W><C-J>
 nnoremap <Leader>kk <C-W><C-K>
