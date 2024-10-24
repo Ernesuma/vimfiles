@@ -341,10 +341,17 @@ set textwidth=0
 set fo-=t   "deactivate automatic insertion of line breaks
 set fo-=c   "deactivate automatic insertion of line breaks in comments
 
+" activate number and relativenumber to get hybrid line numbers
 set number
+set relativenumber
+
 set wrap	"visual line break on
 set lbr		"toggle wrap at word (no line break IN a word)
 set showbreak=:->>
+
+set cursorline
+
+set colorcolumn=80,100,120
 
 " mark all text after column 100 with brown background
 "augroup vimrc_autocmds
