@@ -14,7 +14,9 @@ let s:vimrcPath = s:vimfilespath . '/vimrc'
 set nocompatible
 
 " load vimrc_example.vim
-source $VIMRUNTIME/vimrc_example.vim
+if !has('nvim')
+    source $VIMRUNTIME/vimrc_example.vim
+endif
 
 " append user dir to runtimepath on windows
 "if has('win32') || has('win64')
@@ -22,8 +24,8 @@ source $VIMRUNTIME/vimrc_example.vim
 "endif
 
 " activate the file type detection plug-in
-filetype plugin on
-filetype indent on
+"filetype plugin on
+"filetype indent on
 
 " encoding settings
 set enc=utf-8 "terminal encoding
@@ -120,7 +122,7 @@ set wildmenu
 " ------------
 
 " choose color scheme depending on environment
-if (stridx(&shell, 'bash')!=-1) || has("gui_running")
+if (stridx(&shell, 'bash')!=-1) || has("gui_running") || has('nvim')
     " set console to 256 color mode and choose color scheme
     set t_Co=256
     colorscheme myXoria256
@@ -209,7 +211,7 @@ endfunction
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
 
-" change curser depending on mode in tmux
+" change cursor depending on mode in tmux
 if exists('$TMUX')
     let &t_SI = "\e[6 q"
     let &t_EI = "\e[2 q"
@@ -424,8 +426,6 @@ if has("autocmd")
         " reset cursor when vim exits
         autocmd VimLeave * silent !echo -ne "\<Esc>[5 q"
     endif
-
-    " When vimrc is edited, deploy and reload it
-    "autocmd! bufwritepost vimrc <silent> !~/vimfiles/deploy.bat<CR>|source ~/vimfiles/vimrc
 endif " has("autocmd")
 " ------------------------------------------------------------------------------
+
