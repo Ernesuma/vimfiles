@@ -206,11 +206,6 @@ endfunction
 " nnoremap <silent> <expr> <CR> Highlighting()
 "-------------------------------------------------------------------------------
 
-"-------------------------------------------------------------------------------
-" highlight line background in insert mode
-:autocmd InsertEnter * set cul
-:autocmd InsertLeave * set nocul
-
 " change cursor depending on mode in tmux
 if exists('$TMUX')
     let &t_SI = "\e[6 q"
@@ -232,7 +227,10 @@ set tm=900
 " some remappings of the Escape key
 inoremap <Leader><Leader> <Esc>
 noremap <Leader><Leader> <Esc>
-cnoremap <Leader><Leader> <Esc>
+
+" <Esc> over macro bahaves different then pure <Esc>, so <C-c> does what is
+" intended here --> abort cmdline without execution
+cnoremap <Leader><Leader> <C-c>
 
 " navigating through tags
 " make navigating in help files easier ("]" is hard to reach on my keyboard
@@ -352,6 +350,10 @@ set lbr		"toggle wrap at word (no line break IN a word)
 set showbreak=:->>
 
 set cursorline
+"-------------------------------------------------------------------------------
+" highlight line background in insert mode
+":autocmd InsertEnter * set cul
+":autocmd InsertLeave * set nocul
 
 set colorcolumn=80,100,120
 
